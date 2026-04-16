@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- الثيم الأساسي للتطبيق (داكن) -->
+    <style name="Theme.Ejar" parent="android:Theme.Material.NoActionBar">
+        <!-- لون الخلفية الأساسي -->
+        <item name="android:windowBackground">@color/navy_background</item>
+        <!-- لون شريط الحالة -->
+        <item name="android:statusBarColor">@color/navy_background</item>
+        <!-- لون شريط التنقل -->
+        <item name="android:navigationBarColor">@color/navy_background</item>
+        <!-- أيقونات شريط الحالة فاتحة -->
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- ثيم شاشة البداية (Splash Screen) -->
+    <style name="Theme.Ejar.Splash" parent="Theme.Ejar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <!-- ثيم بدون شريط عنوان -->
+    <style name="Theme.Ejar.NoActionBar" parent="Theme.Ejar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- ثيم شفاف (للتأثيرات الزجاجية) -->
+    <style name="Theme.Ejar.Translucent" parent="Theme.Ejar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>
