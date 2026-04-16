@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- استثناء ذاكرة التخزين المؤقت من النسخ الاحتياطي -->
+    <exclude domain="cache" path="." />
+    <!-- استثناء الملفات المؤقتة -->
+    <exclude domain="external" path="." />
+</full-backup-content>
