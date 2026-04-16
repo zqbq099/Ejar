@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- مشاركة الصور من مجلد الصور الخاص بالتطبيق -->
+    <external-path
+        name="images"
+        path="Pictures/Ejar" />
+    
+    <!-- مشاركة الملفات من ذاكرة التخزين المؤقت -->
+    <cache-path
+        name="cache"
+        path="/" />
+    
+    <!-- مشاركة الملفات من التخزين الداخلي -->
+    <files-path
+        name="files"
+        path="/" />
+    
+    <!-- مشاركة الصور من مجلد الوسائط الخارجي -->
+    <external-media-path
+        name="media"
+        path="Pictures/Ejar" />
+</paths>
