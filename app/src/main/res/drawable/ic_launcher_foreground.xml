@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- حرف E بشكل ذهبي فاخر -->
+    <path
+        android:fillColor="@color/luxury_gold"
+        android:pathData="M36,36 L72,36 L72,44 L44,44 L44,50 L68,50 L68,58 L44,58 L44,64 L72,64 L72,72 L36,72 Z" />
+    
+    <!-- تاج صغير فوق الحرف -->
+    <path
+        android:fillColor="@color/luxury_gold"
+        android:pathData="M42,28 L48,20 L54,28 L66,26 L58,34 L62,46 L54,38 L48,46 L42,38 L34,46 L38,34 L30,26 Z" />
+</vector>
