@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- اسم التطبيق -->
+    <string name="app_name">إيجار</string>
+
+    <!-- نصوص عامة -->
+    <string name="welcome">مرحباً بك في إيجار</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="register">إنشاء حساب</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="delete">حذف</string>
+    <string name="edit">تعديل</string>
+    <string name="search">بحث</string>
+    <string name="filter">تصفية</string>
+    <string name="submit">إرسال</string>
+    <string name="continue_text">متابعة</string>
+    <string name="back">رجوع</string>
+    <string name="next">التالي</string>
+    <string name="done">تم</string>
+    <string name="confirm">تأكيد</string>
+    <string name="loading">جاري التحميل...</string>
+    <string name="error">حدث خطأ</string>
+    <string name="success">تم بنجاح</string>
+    <string name="no_internet">لا يوجد اتصال بالإنترنت</string>
+    <string name="try_again">حاول مرة أخرى</string>
+    <string name="required_field">هذا الحقل مطلوب</string>
+
+    <!-- نصوص المصادقة -->
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="enter_phone">أدخل رقم هاتفك</string>
+    <string name="verification_code">رمز التحقق</string>
+    <string name="enter_code">أدخل رمز التحقق</string>
+    <string name="resend_code">إعادة إرسال الرمز</string>
+    <string name="sign_in_google">الدخول بحساب Google</string>
+    <string name="sign_in_facebook">الدخول بحساب Facebook</string>
+    <string name="sign_in_phone">الدخول برقم الهاتف</string>
+    <string name="or">أو</string>
+
+    <!-- نصوص القائمة الرئيسية -->
+    <string name="home">الرئيسية</string>
+    <string name="explore">استكشاف</string>
+    <string name="add_property">إضافة عقار</string>
+    <string name="wallet">المحفظة</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="favorites">المفضلة</string>
+    <string name="my_properties">عقاراتي</string>
+    <string name="settings">الإعدادات</string>
+    <string name="admin_dashboard">لوحة التحكم</string>
+
+    <!-- نصوص المحفظة -->
+    <string name="balance">الرصيد</string>
+    <string name="qurush">قروش</string>
+    <string name="mining_rate">معدل التعدين</string>
+    <string name="per_hour">في الساعة</string>
+    <string name="transfer">تحويل</string>
+    <string name="buy_qurush">شراء قروش</string>
+    <string name="boost_mining">تعزيز التعدين</string>
+    <string name="transaction_history">سجل العمليات</string>
+    <string name="send_to">إرسال إلى</string>
+    <string name="amount">المبلغ</string>
+    <string name="enter_phone_recipient">أدخل رقم هاتف المستلم</string>
+    <string name="enter_amount">أدخل المبلغ</string>
+    <string name="insufficient_balance">رصيد غير كاف</string>
+
+    <!-- نصوص العقارات -->
+    <string name="property_details">تفاصيل العقار</string>
+    <string name="rooms">غرف</string>
+    <string name="bathrooms">حمامات</string>
+    <string name="area_sqm">المساحة (م²)</string>
+    <string name="location">الموقع</string>
+    <string name="description">الوصف</string>
+    <string name="price">السعر</string>
+    <string name="contact_owner">تواصل مع المالك</string>
+    <string name="reveal_number">كشف الرقم</string>
+    <string name="share_card">مشاركة البطاقة</string>
+    <string name="add_to_favorites">إضافة للمفضلة</string>
+    <string name="remove_from_favorites">إزالة من المفضلة</string>
+    <string name="golden_ad">إعلان ذهبي</string>
+    <string name="views">مشاهدة</string>
+    <string name="likes">إعجاب</string>
+
+    <!-- نصوص إضافة عقار -->
+    <string name="step_1_location">الموقع</string>
+    <string name="step_2_media">الوسائط</string>
+    <string name="step_3_description">الوصف</string>
+    <string name="step_4_pricing">التسعير</string>
+    <string name="use_current_location">استخدام موقعي الحالي</string>
+    <string name="city">المدينة</string>
+    <string name="neighborhood">الحي</string>
+    <string name="address">العنوان</string>
+    <string name="title_hint">عنوان الإعلان</string>
+    <string name="property_type">نوع العقار</string>
+    <string name="villa">فيلا</string>
+    <string name="apartment">شقة</string>
+    <string name="office">مكتب</string>
+    <string name="land">أرض</string>
+    <string name="upload_images">رفع الصور</string>
+    <string name="upload_blueprint">رفع المخطط</string>
+    <string name="generate_ai_description">توليد وصف بالذكاء الاصطناعي</string>
+    <string name="generating">جاري التوليد...</string>
+    <string name="golden_ad_cost">تكلفة الإعلان الذهبي: 100 قرش</string>
+    <string name="post_property">نشر الإعلان</string>
+    <string name="post_reward">ستحصل على 50 قرش مكافأة عند النشر</string>
+
+    <!-- فيسبوك -->
+    <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
+    <string name="facebook_client_token">YOUR_FACEBOOK_CLIENT_TOKEN</string>
+    <string name="fb_login_protocol_scheme">fbYOUR_FACEBOOK_APP_ID</string>
+
+    <!-- إعدادات -->
+    <string name="language">اللغة</string>
+    <string name="arabic">العربية</string>
+    <string name="english">English</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="terms_conditions">الشروط والأحكام</string>
+    <string name="about">عن التطبيق</string>
+    <string name="version">الإصدار</string>
+</resources>
