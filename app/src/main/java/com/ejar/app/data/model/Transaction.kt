@@ -10,7 +10,8 @@ data class Transaction(
     val amount: Long = 0L,
     val type: TransactionType = TransactionType.OTHER,
     val description: String = "",
-    val timestamp: Long = System.currentTimeMillis(),
+    // تم التعديل: القيمة الافتراضية null ليتم تعيينها عند الإنشاء الفعلي
+    val timestamp: Long? = null,
     val referenceId: String = ""
 ) : Parcelable {
     val isCredit: Boolean get() = amount > 0
