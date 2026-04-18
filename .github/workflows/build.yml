@@ -21,7 +21,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      # ← هذي الخطوة اللي بتنقذنا (Permission denied)
+      # هذي الخطوة مهمة جداً عشان نحل مشكلة Permission denied
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
