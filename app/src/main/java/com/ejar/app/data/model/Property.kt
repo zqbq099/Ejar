@@ -26,7 +26,8 @@ data class Property(
     val likes: Int = 0,
     val isGolden: Boolean = false,
     val type: PropertyType = PropertyType.APT,
-    val createdAt: Long = System.currentTimeMillis(),
+    // تم التعديل: القيمة الافتراضية null ليتم تعيينها عند الإنشاء الفعلي
+    val createdAt: Long? = null, 
     val revealCount: Int = 0,
     val shareCount: Int = 0
 ) : Parcelable {
