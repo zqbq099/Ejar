@@ -2,10 +2,12 @@ name: Build Android APK
 
 on:
   workflow_dispatch:
+  push:
+    branches: [ "main" ] # إضافة التشغيل التلقائي عند الدفع لفرع main
 
 jobs:
   build:
-    name: Build APK
+    name: Build Release APK
     runs-on: ubuntu-latest
 
     steps:
@@ -20,17 +22,32 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+        with:
+          # تفعيل التخزين المؤقت لتحسين سرعة البناء
+          cache-read-only: ${{ github.ref != 'refs/heads/main' }}
+          cache-write-only: ${{ github.ref == 'refs/heads/main' }}
 
-      # هذي الخطوة مهمة جداً عشان نحل مشكلة Permission denied
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+      - name: Decode Keystore
+        env:
+          SIGNING_KEY_BASE64: ${{ secrets.SIGNING_KEY_BASE64 }}
+        run: |
+          echo $SIGNING_KEY_BASE64 | base64 --decode > $HOME/keystore.jks
 
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+      - name: Build Release APK
+        env:
+          SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
+          SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
+          SIGNING_KEY_ALIAS_PASSWORD: ${{ secrets.SIGNING_KEY_ALIAS_PASSWORD }}
+        run: |
+          gradle assembleRelease \
+            -Pandroid.injected.signing.store.file=$HOME/keystore.jks \
+            -Pandroid.injected.signing.store.password=$SIGNING_KEY_PASSWORD \
+            -Pandroid.injected.signing.key.alias=$SIGNING_KEY_ALIAS \
+            -Pandroid.injected.signing.key.password=$SIGNING_KEY_ALIAS_PASSWORD
 
       - name: Upload APK to Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: Ejar-Debug-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: Ejar-Release-APK
+          path: app/build/outputs/apk/release/app-release.apk
           retention-days: 7
