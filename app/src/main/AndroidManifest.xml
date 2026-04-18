@@ -2,7 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- الأذونات الأساسية المطلوبة -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- أذونات الموقع المطلوبة لخرائط جوجل -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+    <!-- إذن الكاميرا (محتمل أن تحتاجه لمسح QR أو رفع صور) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
 
     <application
         android:name=".EjarApplication"
@@ -14,6 +24,11 @@
         android:theme="@style/Theme.Ejar"
         tools:targetApi="31">
 
+        <!-- مفتاح خرائط جوجل - استبدل القيمة بمفتاحك الخاص -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_GOOGLE_MAPS_API_KEY" />
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
@@ -23,6 +38,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- تسجيل خدمة استقبال الإشعارات من Firebase -->
+        <service
+            android:name=".services.EjarFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
     </application>
 
