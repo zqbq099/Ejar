@@ -18,10 +18,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      # ← الكاش مطفي عشان GitHub معطل دلوقتي
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+        with:
+          cache-disabled: true
 
-      # ← هذي الخطوة المهمة جداً (تحل مشكلة Permission denied)
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
